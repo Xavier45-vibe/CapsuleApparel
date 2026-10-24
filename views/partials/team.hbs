@@ -1,0 +1,16 @@
+<section class="team-section section-pad" id="team">
+  <div class="team-copy">
+    <p class="eyebrow">ABOUT THE TEAM</p>
+    <h2>Made by people.<br /><em>For people.</em></h2>
+    <p>We’re a close-knit crew of designers, makers and very enthusiastic outfit repeaters. Capsule began with one simple thought: getting dressed should feel good, and doing good shouldn’t be complicated.</p>
+    <a class="button button-dark" href="/products">Shop the collection <span>↗</span></a>
+  </div>
+  <ul class="team-list">
+    {{#each team}}
+    <li class="team-member">
+      <span class="team-avatar" aria-hidden="true">{{initials}}</span>
+      <div><h3>{{name}}</h3><p class="team-role">{{role}}</p><p class="team-bio">{{bio}}</p></div>
+    </li>
+    {{/each}}
+  </ul>
+</section>

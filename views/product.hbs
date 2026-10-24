@@ -1,0 +1,31 @@
+<nav class="breadcrumb section-pad-x" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/products">Shop</a> / <span>{{product.name}}</span></nav>
+
+<section class="product-detail-page section-pad-x">
+  <div class="pdp-image"><img src="{{product.image}}" alt="{{product.name}}" />{{#if product.tag}}<span class="product-tag">{{product.tag}}</span>{{/if}}</div>
+  <div class="pdp-info">
+    <p class="eyebrow">{{product.material}} · {{product.colour}}</p>
+    <h1>{{product.name}}</h1>
+    <p class="pdp-price">${{product.price}}</p>
+    <p class="pdp-desc">{{product.description}}</p>
+
+    <p class="size-label">SELECT A SIZE</p>
+    <div class="size-options" role="group" aria-label="Select a size">
+      {{#each product.sizes}}<button type="button" data-size="{{this}}" aria-pressed="false">{{this}}</button>{{/each}}
+    </div>
+
+    <button class="dialog-add" data-add-to-bag data-name="{{product.name}}">ADD TO BAG — ${{product.price}}</button>
+    <p class="pdp-note">Free shipping over $150 · Easy 30-day returns</p>
+
+    <ul class="pdp-details">
+      {{#each product.details}}<li>{{this}}</li>{{/each}}
+    </ul>
+    <p class="pdp-care"><strong>Care.</strong> {{product.care}}</p>
+  </div>
+</section>
+
+<section class="shop-section section-pad">
+  <div class="section-heading"><div><p class="eyebrow">PAIRS WELL WITH</p><h2>You might <em>also like.</em></h2></div><a class="text-link" href="/products">Shop all <span>↗</span></a></div>
+  <div class="product-grid three">
+    {{#each related}}{{> product_card}}{{/each}}
+  </div>
+</section>

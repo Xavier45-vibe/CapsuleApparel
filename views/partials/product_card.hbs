@@ -1,0 +1,11 @@
+<a class="product-card" href="/products/{{slug}}">
+  <div class="product-image-wrap">
+    <img src="{{image}}" alt="{{name}}" loading="lazy" />
+    {{#if tag}}<span class="product-tag">{{tag}}</span>{{/if}}
+    <span class="quick-add">VIEW PIECE &nbsp;→</span>
+  </div>
+  <div class="product-info">
+    <div><h3 class="product-name">{{name}}</h3><p class="product-detail">{{material}} · {{colour}}</p></div>
+    <span class="product-price">${{price}}</span>
+  </div>
+</a>
